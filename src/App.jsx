@@ -10,11 +10,7 @@ export default function App() {
      
       <Routes>
         <Route path="/" element={<Home />} />
-        {import.meta.env.VITE_APP_ENV === 'production' ? (
-          <Route path="https://best-motors.vercel.app/add-product" element={<AddProduct />} />
-        ) : 
-          <Route path="/add-product" element={<AddProduct />} />
-        }
+        <Route path="https://best-motors.vercel.app/add-product" element={<AddProduct />} />
       </Routes>
 
 
