@@ -10,7 +10,7 @@ export default function App() {
      
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="https://best-motors.vercel.app/add-product" element={<AddProduct />} />
+        <Route path="/https://best-motors.vercel.app/add-product" element={<AddProduct />} />
       </Routes>
 
 
