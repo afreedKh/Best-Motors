@@ -1,12 +1,4 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Bikes from './components/Bikes'
-import WhyUs from './components/WhyUs'
-import Brands from './components/Brands'
-import Reviews from './components/Reviews'
-import Location from './components/Location'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
+
 import { Routes,Route } from 'react-router-dom'
 import AddProduct from './pages/AddProduct'
 import Home from './pages/Home'
@@ -18,7 +10,11 @@ export default function App() {
      
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/add-product" element={<AddProduct />} />
+        {import.meta.env.VITE_APP_ENV === 'production' ? (
+          <Route path="https://best-motors.vercel.app/add-product" element={<AddProduct />} />
+        ) : 
+          <Route path="/add-product" element={<AddProduct />} />
+        }
       </Routes>
 
 
